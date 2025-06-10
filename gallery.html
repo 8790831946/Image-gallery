@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>image gallery</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .background{
+                width:200px;
+                height:300px;
+                background-color: red;s
+                background:linear-gradient(pink,yellow,orange);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Image Gallery</h1>
+        <div class="filters">
+            <button  onclick="filterImages('all')">All</button>
+            <button  onclick="filterImages('nature')">Nature</button>
+            <button  onclick="filterImages('city')">City</button>
+        </div>
+        <div class="gallery">
+            <img src="gallery/istockphoto-1283852667-1024x1024.jpg" class="all" alt="All" onClick="openLightbox(this)">
+            <img src="gallery/istockphoto-1317323736-1024x1024.jpg" class="nature" alt="Nature" onClick="openLightbox(this)">
+            <img src="gallery/istockphoto-1394781347-1024x1024.jpg" class="nature" alt="Nature" onClick="openLightbox(this)">
+        </div>
+            <div class="gallery1">
+            <img src="gallery/istockphoto-1456147420-1024x1024.jpg" class="city" alt="City" onClick="openLightbox(this)">
+            <img src="gallery/istockphoto-1458782106-1024x1024.jpg" class="nature" alt="Nature" onClick="openLightbox(this)">
+            <img src="gallery/istockphoto-2185288278-1024x1024.jpg" class="city" alt="City" onClick="openLightbox(this)">
+        </div>
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-img" id="lightboxImg">
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+             <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
